@@ -10,6 +10,11 @@ import 'package:goground/ui/views/test3/animations/change_position.dart';
 import 'package:goground/ui/views/test3/animations/cross_fade.dart';
 import 'package:goground/ui/views/test3/animations/is_expanded.dart';
 import 'package:goground/ui/views/test3/animations/is_visible.dart';
+import 'package:goground/ui/views/test3/flow.dart';
+import 'package:goground/ui/views/test3/flow_w_stack.dart';
+import 'package:goground/ui/views/test3/grids/padding_grid.dart';
+import 'package:goground/ui/views/test3/grids/random_grid.dart';
+import 'package:goground/ui/views/test3/grids/shape_grid.dart';
 import 'package:goground/utils/helpers.dart';
 import 'package:stacked/stacked.dart';
 
@@ -72,6 +77,51 @@ class Test3View extends StackedView<Test3ViewModel> {
                 );
               },
               child: const Text('animated list'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const RandomGrid()),
+                );
+              },
+              child: const Text('random grid'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const PaddingGrid()),
+                );
+              },
+              child: const Text('random grid'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ShapeGrid()),
+                );
+              },
+              child: const Text('random grid'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const FlowMenu()),
+                );
+              },
+              child: const Text('flow'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const FlowWStack()),
+                );
+              },
+              child: const Text('flow'),
             ),
             decContainer(
               radius: 12,
